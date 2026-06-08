@@ -1,0 +1,81 @@
+/* @import url(../components/loading.css);
+@import url(../views/index.css);
+@import url(../components/background.css);
+@import url(../views/erro.css);
+@import url(../views/home.css); */
+
+/* -------------------------------------------- */
+
+/* FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+:root {
+    --cor-1: #000000;
+    --cor-2: #BE1E2D;
+    --cor-3: #ff4d6d;
+    --cor-4: #ffffff;
+    --cor-5: #e2e8f0;
+    --cor-6: #acb5c2;
+
+
+    --font-1: 'Lato';
+    --font-2: 'Arvo', serif;
+    --font-3: "Dancing Script";
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* MENU E LOGO */
+.cabecalho {
+    background-color: #141414;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.cabecalho nav {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cabecalho nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg,
+            #E50914,
+            transparent);
+    padding: 1rem;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    text-shadow: 0 0 3px rgb(209, 213, 219);
+}

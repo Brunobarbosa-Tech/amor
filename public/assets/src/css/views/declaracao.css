@@ -1,0 +1,695 @@
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* MENU E LOGO */
+
+.cabecalho {
+    background-color: #141414;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.cabecalho nav {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cabecalho nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* SESSÃO BANNER */
+
+.banner {
+    position: relative;
+    background: url(../../../images/foto-2.jpeg)no-repeat center center/cover;
+    padding: 120px 1rem 2rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner::after {
+    content: '';
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.858), rgba(0, 0, 0, 0.74) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.conteudo {
+    position: relative;
+    max-width: 100%;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.titulo {
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    margin: 0;
+    color: rgba(255, 255, 255, .95);
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, .2),
+        0 0 30px rgba(255, 255, 255, .1);
+    animation: glow 3s ease-in-out infinite;
+    transition: .3s;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 10px rgba(255, 255, 255, .2),
+            0 0 30px rgba(255, 255, 255, .1);
+    }
+
+    50% {
+        text-shadow:
+            0 0 20px rgba(255, 255, 255, .5),
+            0 0 50px rgba(255, 255, 255, .2);
+    }
+}
+
+.detalhes {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ccc;
+}
+
+.descricao {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+.botoes button {
+    background: #fff;
+    color: black;
+    border: none;
+    padding: 10px 16px;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.botoes .continuar:hover {
+    background-color: #ff0000;
+}
+
+.botoes .favorito:hover {
+    background-color: gold;
+}
+
+/* MUSICA */
+/* TRILHA SONORA NETFLIX */
+.trilha-sonora {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.trilha-sonora h2 {
+    font-size: 2.5rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.subtitulo-musica {
+    color: #b3b3b3;
+    font-size: 1rem;
+    margin-bottom: 40px;
+}
+
+/* CARD PLAYER */
+
+.music-player {
+    max-width: 450px;
+    margin: 0 auto;
+    background: #141414;
+    border: 1px solid #2b2b2b;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow:
+        0 0 20px rgba(229, 9, 20, .15),
+        0 0 40px rgba(229, 9, 20, .05);
+
+    transition: .4s ease;
+}
+
+.music-player:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 25px rgba(229, 9, 20, .25),
+        0 0 60px rgba(229, 9, 20, .10);
+}
+
+/* CAPA */
+.album {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #2b2b2b;
+}
+
+.album img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.album {
+    box-shadow:
+        0 0 15px rgba(229, 9, 20, .2),
+        0 0 35px rgba(229, 9, 20, .1);
+}
+
+/* TITULOS */
+.music-player h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.music-player p {
+    color: #b3b3b3;
+    margin-bottom: 25px;
+    font-size: 1rem;
+}
+
+/* BARRA DE PROGRESSO */
+#progress {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    accent-color: #E50914;
+    margin-bottom: 25px;
+}
+
+/* CONTROLES */
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.controls button {
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #E50914;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+}
+
+/* BOTÃO PLAY */
+
+.play-pause-btn {
+    width: 70px !important;
+    height: 70px !important;
+    font-size: 1.6rem !important;
+    box-shadow:
+        0 0 15px rgba(229, 9, 20, .4);
+}
+
+/* CONTADOR */
+
+.contador-amor {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contador-amor h2 {
+    margin-bottom: 30px;
+    font-family: var(--font-2);
+
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, .2),
+        0 0 30px rgba(255, 255, 255, .1);
+
+    animation: glow 3s ease-in-out infinite;
+    transition: .3s;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 10px rgba(255, 255, 255, .2),
+            0 0 30px rgba(255, 255, 255, .1);
+    }
+
+    50% {
+        text-shadow:
+            0 0 20px rgba(255, 255, 255, .5),
+            0 0 50px rgba(255, 255, 255, .2);
+    }
+}
+
+.contador-amor p {
+    margin-bottom: 30px;
+    font-family: var(--font-2);
+    font-weight: 500;
+}
+
+.tempo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* CARD */
+
+.item {
+    position: relative;
+
+    width: 130px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(20, 20, 20, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    text-align: center;
+    overflow: hidden;
+    box-shadow:
+        0 0 15px rgba(219, 0, 0, .15),
+        0 0 30px rgba(0, 0, 0, .4);
+    transition: .3s ease;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 20px rgba(219, 0, 0, .3),
+        0 0 40px rgba(219, 0, 0, .15);
+}
+
+/* BORDA ANIMADA */
+
+.item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    border-radius: 15px;
+    background: linear-gradient(180deg,
+            #db0000,
+            #000000,
+            #ffffff,
+            #564d4d,
+            #831010);
+
+    background-size: 300% 300%;
+    animation: borderNetflix 8s linear infinite;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+/* BRILHO DE VIDRO */
+
+.item::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -150%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, .15),
+            transparent);
+
+    transform: skewX(-25deg);
+
+    animation: glassReflection 6s infinite;
+}
+
+/* NÚMEROS */
+
+.item span {
+    position: relative;
+    z-index: 2;
+
+    display: block;
+
+    font-size: 2rem;
+    font-weight: bold;
+
+    color: #E50914;
+
+    text-shadow:
+        0 0 10px rgba(229, 9, 20, .4);
+}
+
+/* TEXTOS */
+
+.item p {
+    position: relative;
+    z-index: 2;
+
+    color: #ffffff;
+
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+/* ANIMAÇÕES */
+
+@keyframes borderNetflix {
+
+    0% {
+        background-position: 0% 0%;
+    }
+
+    50% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+@keyframes glassReflection {
+
+    0% {
+        left: -150%;
+    }
+
+    100% {
+        left: 200%;
+    }
+}
+
+.love-card {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 50px;
+    background: #181818;
+    border-radius: 12px;
+    border-left: 6px solid #E50914;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+.love-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 40px rgba(255, 255, 255, 0.603),
+        0 0 20px rgba(255, 255, 255, 0.603);
+}
+
+.love-card h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.love-card h2::before {
+    content: "N";
+    color: #E50914;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.love-card p {
+    color: #d1d5db;
+    text-shadow: 0 0 5px rgb(209, 213, 219);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+
+    .titulo {
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .detalhes {
+        font-size: 18px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
+    .trilha-sonora h2 {
+        font-size: 1.8rem;
+    }
+
+    .music-player {
+        padding: 20px;
+        max-width: 380px;
+    }
+
+    .album {
+        width: 220px;
+        height: 220px;
+    }
+
+    .music-player h3 {
+        font-size: 1.5rem;
+    }
+
+    .tempo {
+        gap: 15px;
+    }
+
+    .item {
+        width: 120px;
+        padding: 18px;
+    }
+
+    .item span {
+        font-size: 1.8rem;
+    }
+
+    .contador-amor h2 {
+        font-size: 1.8rem;
+    }
+
+    .love-card {
+        max-width: 700px;
+        padding: 30px;
+        margin: 50px 20px;
+    }
+
+    .love-card h2 {
+        font-size: 2rem;
+    }
+
+    .love-card p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cabecalho {
+        gap: 15px;
+        padding: 1rem;
+    }
+
+    .cabecalho nav {
+        gap: 8px;
+    }
+
+    .cabecalho nav a {
+        font-size: 12px;
+    }
+
+    .banner {
+        padding: 90px 1rem 2rem;
+    }
+
+    .titulo {
+        font-size: 30px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .detalhes {
+        font-size: 16px;
+    }
+
+    .descricao {
+        font-size: 15px;
+    }
+
+    .botoes button {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+
+    .trilha-sonora h2 {
+        font-size: 1.5rem;
+    }
+
+    .music-player {
+        padding: 18px;
+    }
+
+    .album {
+        width: 180px;
+        height: 180px;
+    }
+
+    .music-player h3 {
+        font-size: 1.3rem;
+    }
+
+    .controls {
+        gap: 12px;
+    }
+
+    .controls button {
+        width: 45px;
+        height: 45px;
+    }
+
+    .play-pause-btn {
+        width: 60px !important;
+        height: 60px !important;
+        font-size: 1.3rem !important;
+    }
+
+    .contador-amor h2 {
+        font-size: 1.2rem;
+    }
+
+    .contador-amor p {
+        font-size: 14px;
+    }
+
+    .tempo {
+        gap: 12px;
+    }
+
+    .item {
+        width: 100px;
+        padding: 15px;
+    }
+
+    .item span {
+        font-size: 1.5rem;
+    }
+
+    .item p {
+        font-size: 13px;
+    }
+
+    .love-card {
+        max-width: 100%;
+        padding: 20px;
+        margin: 40px 15px;
+        border-left: 4px solid #E50914;
+    }
+
+    .love-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .love-card p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .titulo {
+        font-size: 24px;
+        letter-spacing: 0;
+    }
+
+    .trilha-sonora h2 {
+        font-size: 1.3rem;
+    }
+
+    .album {
+        width: 150px;
+        height: 150px;
+    }
+
+    .music-player {
+        padding: 15px;
+    }
+
+    .item {
+        width: 85px;
+        padding: 12px;
+    }
+
+    .item span {
+        font-size: 1.2rem;
+    }
+
+    .item p {
+        font-size: 12px;
+    }
+
+    .love-card {
+        padding: 15px;
+        margin: 30px 10px;
+    }
+
+    .love-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .love-card p {
+        font-size: 0.85rem;
+    }
+}

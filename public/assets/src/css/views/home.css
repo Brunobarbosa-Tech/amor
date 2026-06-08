@@ -1,0 +1,380 @@
+/* SESSÃO BANNER */
+
+.banner {
+    position: relative;
+    background: url(../../../images/foto-1.jpeg)no-repeat center center/cover;
+    padding: 120px 1rem 2rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner::after {
+    content: '';
+    background: linear-gradient(to top, rgb(0, 0, 0, 1), rgba(0, 0, 0, 0.747) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.conteudo {
+    position: relative;
+    max-width: 100%;
+    color: #ffffff;
+    z-index: 2;
+}
+
+.titulo {
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    margin: 0;
+    color: rgba(255, 255, 255, .95);
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, .2),
+        0 0 30px rgba(255, 255, 255, .1);
+    animation: glow 3s ease-in-out infinite;
+    transition: .3s;
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 10px rgba(255, 255, 255, .2),
+            0 0 30px rgba(255, 255, 255, .1);
+    }
+
+    50% {
+        text-shadow:
+            0 0 20px rgba(255, 255, 255, .5),
+            0 0 50px rgba(255, 255, 255, .2);
+    }
+}
+
+.detalhes {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #ccc;
+}
+
+.descricao {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.botoes {
+    margin-top: 20px;
+}
+
+.botoes button {
+    background: #fff;
+    color: black;
+    border: none;
+    padding: 10px 16px;
+    margin-right: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.botoes .continuar:hover {
+    background-color: #ff0000;
+}
+
+.botoes .favorito:hover {
+    background-color: gold;
+}
+
+.momentos {
+    padding: 1.5rem 1rem;
+}
+
+.momentos h2 {
+    margin-bottom: 1rem;
+    font-size: 20px;
+    position: relative;
+    color: white;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.momentos h2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background:
+        rgba(255, 255, 255, .3);
+    transform: skewX(-25deg);
+    animation: shine 4s infinite;
+}
+
+@keyframes shine {
+
+    100% {
+        left: 150%;
+    }
+}
+
+
+.carrossel {
+    width: 100%;
+    overflow: hidden;
+    padding: 40px 0;
+}
+
+.slides {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: deslizar 20s linear infinite;
+}
+
+@keyframes deslizar {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.polaroid {
+    width: 280px;
+    background: white;
+    padding: 12px 12px 40px;
+    border-radius: 4px;
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .35);
+
+    flex-shrink: 0;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+}
+
+/* .polaroid img {
+    width: 100%;
+    height: 490px;
+    object-fit: cover;
+    display: block;
+} */
+
+.polaroid span {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    font-weight: 700;
+    font-family: var(--font-3);
+    font-size: 1.4rem;
+    color: var(--cor-1);
+}
+
+.cabecalho-momentos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.categoria-netflix {
+    display: inline-block;
+    background: #E50914;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.titulo-momentos {
+    display: block;
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.subtitulo-momentos {
+    color: #b3b3b3;
+    margin: 0;
+}
+
+.tag-netflix {
+    display: table;
+    margin: 0 auto 20px;
+    background: #E50914;
+    color: white;
+    padding: 6px 12px;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
+
+.love-card {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 50px;
+    background: #181818;
+    border-radius: 12px;
+    border-left: 6px solid #E50914;
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, .5);
+    text-align: center;
+}
+
+.love-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 0 40px rgba(255, 255, 255, 0.603),
+        0 0 20px rgba(255, 255, 255, 0.603);
+}
+
+.love-card h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.love-card h2::before {
+    content: "N";
+    color: #E50914;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.love-card p {
+    color: #d1d5db;
+    text-shadow: 0 0 5px rgb(209, 213, 219);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.proximo-episodio {
+    position: relative;
+    max-width: 900px;
+    margin: 80px auto;
+    padding-left: 40px;
+}
+
+.proximo-episodio::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    background: #E50914;
+    border-radius: 50%;
+}
+
+.proximo-episodio h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.proximo-episodio p {
+    color: #b3b3b3;
+}
+
+/* MEDIA QUERY */
+
+/* @media (max-width: 768px) {
+
+    .polaroid {
+        width: 220px;
+    }
+
+    .polaroid img {
+        height: 260px;
+    }
+
+    .polaroid span {
+        font-size: 1.1rem;
+    }
+
+    .slides {
+        gap: 20px;
+    }
+
+    .polaroid img {
+        height: auto;
+        object-fit: contain;
+    }
+} */
+
+@media (max-width: 768px) {
+
+    .banner {
+        padding: 90px 20px 40px;
+    }
+
+    .titulo {
+        font-size: 38px;
+        line-height: 1.2;
+    }
+
+    .descricao {
+        font-size: 15px;
+    }
+
+    .titulo-momentos {
+        font-size: 1.7rem;
+    }
+
+    .subtitulo-momentos {
+        font-size: .95rem;
+    }
+
+    .love-card {
+        margin: 50px 20px;
+        padding: 30px;
+    }
+
+    .love-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .love-card p {
+        font-size: 1rem;
+    }
+
+    .proximo-episodio {
+        margin: 50px 20px;
+        padding-left: 30px;
+    }
+
+    .polaroid span {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .polaroid span {
+        font-size: 1rem;
+        margin-top: 10px;
+        line-height: 1.2;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .polaroid span {
+        font-size: 0.8rem;
+    }
+
+}
