@@ -13,24 +13,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <link rel="stylesheet" href="../css/views/home.css">
     <link rel="stylesheet" href="../css/global/reset.css">
-    <title>Feliz dia dos Namorados 💖</title>
+    <link rel="stylesheet" href="../css/components/menumobile.css">
+
+    <script src="../js/effects/efeitos.js" defer></script>
+    <script src="../js/effects/mensagens.js" defer></script>
+    <script src="../js/components/menu.js" defer></script>
+    <script src="../js/effects/supresa.js" defer></script>
+
+    <title>Feliz dia dos Namorados</title>
 </head>
 
 <body>
-    <header class="cabecalho">
-        <div class="logo">
-            <img src="../../logo/netflix.png" alt="logo-Netflix">
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <img src="../../logo/netflix.png" alt="logo-Netflix">
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Séries</a></li>
+                    <li><a href="#">Filmes</a></li>
+                    <li><a href="#">Minha Lista</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-square-fill"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="construcao.html">Séries</a></li>
+                        <li><a href="construcao.html">Filmes</a></li>
+                        <li><a href="construcao.html">Minha Lista</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="overlay-menu" id="overlay-menu"></div>
         </div>
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Séries</a>
-            <a href="#">Filmes</a>
-            <a href="#">Minha Lista</a>
-        </nav>
     </header>
 
     <section class="banner">
@@ -51,9 +84,17 @@
                 acontece nos detalhes… e decidem construir juntas a melhor história de suas vidas.
             </p>
             <div class="botoes">
-                <a href="declaracao.html"><button class="continuar"><i class="bi bi-play-circle-fill"></i>
-                        Continuar</button></a>
-                <button class="favorito"><i class="bi bi-star-fill"></i> Favorito</button>
+                <a href="declaracao.html">
+                    <button class="continuar">
+                        <i class="bi bi-play-circle-fill"></i>
+                        Continuar
+                    </button>
+                </a>
+
+                <button class="favorito" id="surpresa-btn">
+                    <i class="bi bi-star-fill"></i>
+                    Favorito
+                </button>
             </div>
         </div>
     </section>
@@ -84,50 +125,105 @@
 
                 <div class="polaroid">
                     <img src="../../images/foto-2.jpeg" alt="fotos">
-                    <span>Ao seu lado tudo fica melhor 🌹</span>
+                    <span>Tudo fica melhor 🌹</span>
                 </div>
 
                 <div class="polaroid">
                     <img src="../../images/foto-3.jpeg" alt="fotos">
-                    <span>Colecionando memórias com você 📸</span>
+                    <span>Colecionando memórias 📸</span>
                 </div>
 
                 <div class="polaroid">
                     <img src="../../images/foto-5.jpeg" alt="fotos">
-                    <span>Meu lugar favorito é ao seu lado ❤️</span>
+                    <span>Meu lugar favorito ✨</span>
                 </div>
 
                 <div class="polaroid">
                     <img src="../../images/foto-6.jpeg" alt="fotos">
-                    <span>Entre risadas e abraços, nós 💞</span>
+                    <span>Entre risadas e abraços 💞</span>
                 </div>
 
                 <div class="polaroid">
                     <img src="../../images/foto-7.jpeg" alt="fotos">
-                    <span>Um instante que vale uma eternidade ⏳</span>
+                    <span>Nosso Tempo Favorito ⏳</span>
                 </div>
 
                 <div class="polaroid">
                     <img src="../../images/foto-8.jpeg" alt="fotos">
-                    <span>Você transformou meus dias em felicidade ☀️</span>
+                    <span>Nosso Melhor Take 🎬</span>
                 </div>
 
                 <div class="polaroid">
                     <img src="../../images/foto-9.jpeg" alt="fotos">
-                    <span>E essa é só mais uma página da nossa história 💌</span>
+                    <span>Guardado Para Sempre 🎥</span>
                 </div>
 
                 <div class="polaroid">
                     <img src="../../images/foto-10.jpeg" alt="fotos">
-                    <span>O começo da nossa história ❤️</span>
+                    <span>Começo da nossa história 📖</span>
                 </div>
 
                 <div class="polaroid">
                     <img src="../../images/foto-11.jpeg" alt="fotos">
-                    <span>Mais um capítulo do nosso amor 📖</span>
+                    <span>Nosso capítulo do dia 🍿</span>
                 </div>
 
-                  <div class="polaroid">
+                <div class="polaroid">
+                    <img src="../../images/foto-12.jpeg" alt="fotos">
+                    <span>Momentos simples que viraram lembranças 💕</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-1.jpeg" alt="fotos">
+                    <span>Nosso primeiro encontro ❤️</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-2.jpeg" alt="fotos">
+                    <span>Tudo fica melhor 🌹</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-3.jpeg" alt="fotos">
+                    <span>Colecionando memórias 📸</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-5.jpeg" alt="fotos">
+                    <span>Meu lugar favorito ✨</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-6.jpeg" alt="fotos">
+                    <span>Entre risadas e abraços 💞</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-7.jpeg" alt="fotos">
+                    <span>Nosso Tempo Favorito ⏳</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-8.jpeg" alt="fotos">
+                    <span>Nosso Melhor Take 🎬</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-9.jpeg" alt="fotos">
+                    <span>Guardado Para Sempre 🎥</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-10.jpeg" alt="fotos">
+                    <span>Começo da nossa história 📖</span>
+                </div>
+
+                <div class="polaroid">
+                    <img src="../../images/foto-11.jpeg" alt="fotos">
+                    <span>Nosso capítulo do dia 🍿</span>
+                </div>
+
+                <div class="polaroid">
                     <img src="../../images/foto-12.jpeg" alt="fotos">
                     <span>Momentos simples que viraram lembranças 💕</span>
                 </div>
@@ -139,7 +235,7 @@
         NETFLIX ORIGINAL
     </div>
 
-    <section class="love-card">
+    <section class="love-card reveal">
         <h2 class="alma-gemea">Minha Pessoa Especial 🍿</h2>
 
         <p>
@@ -167,6 +263,7 @@
         © 2026 • Feito com amor para você 💘
     </footer>
 
+    <div id="netflix-notify-container"></div>
 </body>
 
 </html>
