@@ -18,7 +18,7 @@ body {
 }
 
 .logo img {
-    width: 50px;
+    width: 80px;
 }
 
 .cabecalho nav {
@@ -39,7 +39,7 @@ body {
 
 .banner {
     position: relative;
-    background: url(../../../images/foto-2.jpeg)no-repeat center center/cover;
+    background: url(../../../img/amor7.png)no-repeat center center/cover;
     padding: 120px 1rem 2rem;
     background-size: cover;
     background-position: center;
@@ -47,7 +47,7 @@ body {
 
 .banner::after {
     content: '';
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.858), rgba(0, 0, 0, 0.74) 100%);
+      background-image:linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
     position: absolute;
     top: 0;
     right: 0;
@@ -466,6 +466,338 @@ body {
     font-size: 1.1rem;
 }
 
+/* ==========================
+   TOP 10 NETFLIX
+========================== */
+
+.trailer {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.hero {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, .95),
+            rgba(0, 0, 0, .2));
+}
+
+.hero-info {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: #fff;
+    max-width: 500px;
+}
+
+.tag {
+    background: #E50914;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.hero-info h2 {
+    font-size: 2.2rem;
+    margin: 15px 0 10px;
+}
+
+.hero-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.thumbs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.thumbs img {
+    width: 180px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    display: block;
+}
+.thumbs img:hover {
+    transform: scale(1.02);
+    border: 2px solid #E50914;
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+
+    .trailer {
+        padding: 0 15px;
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero-info {
+        left: 30px;
+        bottom: 30px;
+        max-width: 70%;
+    }
+
+    .hero-info h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-info p {
+        font-size: .9rem;
+    }
+
+    .tag {
+        font-size: .7rem;
+    }
+
+    .thumbs {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+
+    .thumbs img {
+        width: 140px;
+        height: 80px;
+    }
+}
+
+/* =========================
+   CARD NETFLIX (1 ITEM)
+========================= */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+     margin-bottom: 80px;
+    transition: .3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
+
+/* IMAGEM */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: .4s ease;
+}
+
+/* TEXTO (APARECE NO HOVER) */
+.card .info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.95),
+        transparent
+    );
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .3s ease;
+}
+
+.card .info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.card .info p {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* HOVER NETFLIX */
+.card:hover {
+    transform: scale(1.06);
+    z-index: 10;
+}
+
+.card:hover img {
+    filter: brightness(0.6);
+}
+
+.card:hover .info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BADGE "NOVO" */
+.card::before {
+    content: "NOVO";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #E50914;
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+
+    .card-wrapper {
+        margin-top: 30px;
+        padding: 0 15px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 400px;
+        height: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .card-wrapper {
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+        height: 220px;
+    }
+
+    .card .info h3 {
+        font-size: 14px;
+    }
+
+    .card .info p {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .card {
+        height: 200px;
+        max-width: 280px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .trailer {
+        padding: 0 12px;
+    }
+
+    .hero {
+        height: 320px;
+        border-radius: 15px;
+    }
+
+    .hero-info {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        max-width: unset;
+    }
+
+    .hero-info h2 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .hero-info p {
+        font-size: .75rem;
+        line-height: 1.5;
+        margin-top: 8px;
+    }
+
+    .tag {
+        font-size: .6rem;
+        padding: 4px 8px;
+    }
+
+      .thumbs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .thumbs img {
+        width: 100%;
+        height: 110px;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 10px;
+        display: block;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .hero {
+        height: 260px;
+    }
+
+    .hero-info {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .hero-info h2 {
+        font-size: 1rem;
+    }
+
+    .hero-info p {
+        font-size: .7rem;
+    }
+
+    .thumbs img {
+        width: 60px;
+        height: 40px;
+    }
+}
+
+
 
 /* RESPONSIVIDADE */
 
@@ -549,8 +881,16 @@ body {
         font-size: 12px;
     }
 
-    .banner {
+     .banner {
+        background-position: center top;
         padding: 90px 1rem 2rem;
+    }
+
+      .banner::after {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.85)
+        );
     }
 
     .titulo {
@@ -648,6 +988,10 @@ body {
 }
 
 @media (max-width: 360px) {
+     .banner {
+        background-position: center 20%;
+        padding: 70px 1rem 2rem;
+    }
 
     .titulo {
         font-size: 24px;

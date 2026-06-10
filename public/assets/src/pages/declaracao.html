@@ -27,6 +27,7 @@
     <script src="../js/components/menu.js" defer></script>
     <script src="../js/effects/mensagens.js" defer></script>
     <script src="../js/effects/supresa.js" defer></script>
+    <script src="../js/effects/top10.js" defer></script>
 
     <title>Declaração 💕</title>
 </head>
@@ -35,15 +36,15 @@
     <header>
         <div class="interface">
             <div class="logo">
-                <img src="../../logo/netflix.png" alt="logo-Netflix">
+                <img src="../../logo/logo.png" alt="logo-Netflix">
             </div>
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Séries</a></li>
-                    <li><a href="#">Filmes</a></li>
-                    <li><a href="#">Minha Lista</a></li>
+                    <li><a href="home.html">Início</a></li>
+                    <li><a href="construcao.html">Séries</a></li>
+                    <li><a href="construcao.html">Filmes</a></li>
+                    <li><a href="construcao.html">Minha Lista</a></li>
                 </ul>
             </nav>
 
@@ -172,6 +173,46 @@
 
     </section>
 
+    <section class="trailer">
+
+        <div class="hero">
+
+            <img id="heroImage" src="../../img/amor6.png" alt="">
+
+            <div class="overlay"></div>
+
+            <div class="hero-info">
+
+                <span class="tag">
+                    SÉRIE EXCLUSIVA
+                </span>
+
+                <h2 id="heroTitle">
+                    O Começo de Tudo ❤️
+                </h2>
+
+                <p id="heroDescription">
+                    Uma aventura inesquecível.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="thumbs">
+
+            <img src="../../img/amor5.png" onclick="trocarTrailer(0)">
+
+            <img src="../../img/amor2.png" onclick="trocarTrailer(1)">
+
+            <img src="../../img/amor3.png" onclick="trocarTrailer(2)">
+
+            <img src="../../img/amor7.png" onclick="trocarTrailer(3)">
+
+        </div>
+
+    </section>
+
     <section class="contador-amor">
 
         <h2>❤️ Desde 24 de Janeiro de 2026 ❤️</h2>
@@ -208,6 +249,34 @@
 
     </section>
 
+    <div class="sessao">
+        <div class="row">
+            <div class="img-coluna">
+                <img src="../../img/tv.gif" alt="Tv-apresentação">
+            </div>
+
+            <div class="texto-coluna">
+                <h2>Entretenimento sem limites</h2>
+                <p>Faça downloads rapidamente e tenha sempre algo para assistir.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="texto-coluna">
+                <h2>Sua próxima maratona começa aqui.</h2>
+                <p>Desfrute de uma experiência completa em qualquer dispositivo compatível.</p>
+            </div>
+
+            <div class="img-coluna">
+                <img src="../../img/nt.gif" alt="Tv-apresentação">
+            </div>
+        </div>
+    </div>
+
+    <div class="tag-netflix">
+        NETFLIX ORIGINAL
+    </div>
+
     <section class="love-card reveal">
         <h2 class="alma-gemea">Minha Pessoa Especial ❤️</h2>
 
@@ -222,6 +291,17 @@
             estar. ❤️
         </p>
     </section>
+
+    <div class="card-wrapper">
+        <div class="card">
+            <img src="../../img/amor4.png" alt="Filme">
+
+            <div class="info">
+                <h3>Nome do Filme</h3>
+                <p>Romance • Aventura • 2026</p>
+            </div>
+        </div>
+    </div>
 
     <footer>
         © 2026 • Feito com amor para você 💘

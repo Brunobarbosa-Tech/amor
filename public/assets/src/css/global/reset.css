@@ -129,7 +129,6 @@ header nav.menu-desktop ul li {
 }
 
 /* ANIMAÇÃO SUPRESA */
-
 .cinema-overlay {
     position: fixed;
     top: 0;
@@ -179,9 +178,7 @@ header nav.menu-desktop ul li {
     -webkit-text-fill-color: transparent;
     animation:
         gradientMove 4s ease infinite;
-
-    text-shadow:
-        0 0 20px rgba(229, 9, 20, .6);
+    text-shadow: 0 0 20px rgba(229, 9, 20, .6);
 }
 
 .love-message {
@@ -195,17 +192,14 @@ header nav.menu-desktop ul li {
     animation:floatMessage 4s ease forwards;
 }
 
-/* =========================
-   CORAÇÕES
-========================= */
-
+/* CORAÇÕES */
 .heart-particle {
     position: fixed;
     font-size: 35px;
     pointer-events: none;
     z-index: 999997;
     animation:
-        heartFloat 5s linear forwards;
+     heartFloat 5s linear forwards;
 }
 
 @keyframes gradientMove {
@@ -336,27 +330,180 @@ header nav.menu-desktop ul li {
 
 }
 
-/* .favorito.explodindo {
-    animation: brilho 1s ease;
+/* INFORMAÇÃO NETFLIX */
+.sessao {
+    padding: 50px 12%;
+    font-size: 22px;
 }
 
-@keyframes brilho {
+.row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
 
-    0% {
-        transform: scale(1);
+.texto-coluna {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-coluna {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+
+.img-coluna img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+.texto-coluna h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #E50914;
+}
+
+.texto-coluna p {
+    color: var(--cor-4);
+}
+
+
+
+
+.faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+    color: var(--cor-4);
+}
+
+.faq h2 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 22px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #181818;
+    border-left: 4px solid #E50914;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: .3s ease;
+}
+
+.accordion li label:hover {
+    background: #252525;
+    transform: translateX(5px);
+}
+
+label::after {
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: inherit;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.accordion .content {
+    background: #101010;
+    border-left: 4px solid #E50914;
+    border-radius: 0 0 8px 8px;
+    text-align: left;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        max-height .6s ease,
+        padding .6s ease;
+}
+
+.accordion input[type="radio"]:checked+label+.content {
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked+label::after {
+    transform: rotate(135deg);
+}
+
+@media only screen and (max-width: 600px) {
+
+    .texto-coluna,
+    .img-coluna {
+        flex-basis: 100%;
     }
 
-    50% {
-        transform: scale(1.15);
-        box-shadow:
-            0 0 20px #E50914,
-            0 0 40px #E50914;
+    .texto-coluna h2 {
+        font-size: 20px;
     }
 
-    100% {
-        transform: scale(1);
+    .texto-coluna p {
+        font-size: 15px;
     }
-} */
+
+    .row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    .texto-coluna .row {
+        padding: 10px 0;
+    }
+
+    .faq h2 {
+        font-size: 20px;
+    }
+
+    .accordion .content {
+        font-size: 14px;
+    }
+
+    .accordion li label {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    label::after {
+        font-size: 22px;
+    }
+}
+
+/* TAG NETFLIX */
+.tag-netflix {
+    display: table;
+    margin: 0 auto 20px;
+    background: #E50914;
+    color: white;
+    padding: 6px 12px;
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
 
 /* FOOTER */
 footer {
