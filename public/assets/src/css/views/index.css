@@ -188,17 +188,17 @@
     .btns {
         margin-top: 15px;
         gap: 10px;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
     }
 
     .botoes .btns a {
-        width: min(200px, 100%);
-        justify-content: center;
+        width: auto;
     }
 
     .botoes .btns button {
-        width: 100%;
-        max-width: 200px;
+        width: 100px;
         height: 40px;
         font-size: .95rem;
         margin: 0;
