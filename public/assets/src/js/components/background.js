@@ -93,9 +93,11 @@
     document.body.appendChild(bubble);
     return {
       setPosition: function (x, y) {
-        bubble.style.left = x + "px";
+        const limitX = window.innerWidth - 80;
+        const limitY = window.innerHeight - 80;
 
-        bubble.style.top = y + "px";
+        bubble.style.left = Math.min(x, limitX) + "px";
+        bubble.style.top = Math.min(y, limitY) + "px";
       },
       _animate: function () {
         var animateBubble = animateIt(bubbleDummy, 1200),
@@ -148,7 +150,7 @@
 
     handleDown(de);
 
-    bblUp = setTimeout(bubbleUp, 200);
+    bblUp = setTimeout(bubbleUp, 350);
   }
   bubbleUp();
 
