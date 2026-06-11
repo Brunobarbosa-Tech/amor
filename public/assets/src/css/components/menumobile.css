@@ -64,3 +64,11 @@
     font-size: 30px;
     cursor: pointer;
 }
+
+.btn-abrir-menu,
+.btn-abrir-menu i,
+.menu-mobile .btn-fechar,
+.menu-mobile .btn-fechar i,
+.menu-mobile nav ul li a {
+    -webkit-tap-highlight-color: transparent;
+}
