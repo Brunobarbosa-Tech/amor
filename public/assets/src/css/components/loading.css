@@ -83,6 +83,7 @@ main.show {
     left: 15%;
     transform-origin: 50%;
     animation: circle .5s alternate infinite ease;
+    z-index: 1;
 }
 
 @keyframes circle {
@@ -121,7 +122,7 @@ main.show {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.356);
     position: absolute;
-    top: 62px;
+    top: 66px;
     transform-origin: 50%;
     z-index: 0;
     left: 15%;
@@ -207,7 +208,7 @@ main.show {
     .shadow {
         width: 18px;
         height: 3px;
-        top: 55px;
+        top: 66px;
     }
 
     .wrapper span {
@@ -240,7 +241,7 @@ main.show {
     .shadow {
         width: 16px;
         height: 3px;
-        top: 50px;
+        top: 66px;
     }
 
     .wrapper span {
